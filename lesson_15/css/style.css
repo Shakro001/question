@@ -1,0 +1,85 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class*="__container"] {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 0 31px 0;
+}
+
+.header__logo {}
+
+.header__main-content {
+    display: flex;
+    padding: 12px 48px;
+    flex: 1 1 600px;
+    justify-content: center;
+    column-gap: 210px;
+
+
+}
+
+.header__search img {
+    vertical-align: middle;
+    bottom: 1px;
+    margin-right: 12px;
+}
+
+.header__language img {
+    vertical-align: middle;
+    margin-left: 19px;
+    bottom: 1px;
+}
+.header__language{
+    position: relative; 
+}
+
+
+.header__menu-language {
+
+}
+.menu-language {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu-language__item {
+}
+.menu-language__link {
+}
+
+.header__button {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 29px;
+
+}
+
+.header__login {
+    border-radius: 8px;
+    padding: 12px 48px;
+    background: #8A33FD;
+    transition: background, .5s;
+
+}
+
+.header__sign-up {
+    border-radius: 8px;
+    border: 2px solid #3C4242;
+    padding: 12px 48px;
+}
+
+.header__login:hover{
+    background: #9051e2;
+
+}
