@@ -1,0 +1,70 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: black;
+}
+
+[class*="__container"] {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+
+.header__container {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header__logo {
+    color: var(--white-main-white, #FFF);
+    font-family: Canela;
+    font-size: 32px;
+    line-height: 1.20;
+}
+
+.header__logo::before {
+    content: "";
+    background: url(../image/header__img/icon_website.svg);
+    width: 28px;
+    height: 28px;
+    transform: translateY(2px);
+    margin-right: 8px;
+
+
+}
+
+.header__logo span {
+    color: var(--Primary, #D3F85A);
+    font-family: Canela;
+    font-size: 32px;
+    line-height: 1.20;
+}
+
+.header__menu {
+    color: white;
+}
+
+.menu {}
+
+.menu__list {
+    display: flex;
+    flex: 1 1 950px;
+    column-gap: 40px;
+    color: var(--white-dissable-1, rgba(255, 255, 253, 0.72));
+    font-family: Inter;
+    line-height: 1.60;
+}
+
+.menu__item {}
+
+.menu__link {}
