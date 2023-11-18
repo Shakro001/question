@@ -500,11 +500,6 @@ span {
     row-gap: 4px;
 }
 
-.artists-work__card:nth-child(1),
-.artists-work__card:nth-child(2){
-    height: 311px;
-}
-
 .artists-work__job-title {}
 
 .artists-work__name {
