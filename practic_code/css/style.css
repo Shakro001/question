@@ -1,0 +1,63 @@
+@import url(fonts.css);
+@import url(reset.css);
+
+body {
+    font-family: 'Poppins';
+
+
+}
+
+.wrapper {
+    overflow: clip;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1250px;
+}
+
+.blocks {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.item{
+    flex: 1 0 calc(25% - 30px);  
+    overflow: hidden;
+}
+
+.block {
+    background-color: green;
+    overflow: hidden;
+
+}.block p{
+    padding: 10px 20px;
+}
+
+.block img {
+    max-width: 100%;
+    aspect-ratio: 290 / 274;
+    object-fit: cover;
+    transition: all .4s;
+
+}
+
+@media (max-width: 850px) {
+    .item{
+      flex: 1 0 calc(50% - 30px);   
+    }
+    
+}@media (max-width: 450px) {
+    .item{
+      flex: 1 0 100%;   
+    }
+    
+}@media (any-hover: hover){
+    .block img:hover{
+        transform: scale(1.2);
+
+    }    
+}
