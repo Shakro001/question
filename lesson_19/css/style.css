@@ -9,14 +9,14 @@
 }
 
 
-
-.main {}
-
 .main__container {
     margin: 0 auto;
     border: 1px solid;
     max-width: 1270px;
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
 }
 
 .section-one {
@@ -24,9 +24,6 @@
     gap: 30px;
 }
 
-.main__section-one {
-    margin-bottom: 100px;
-}
 
 .section-one__block {
     position: relative;
@@ -158,12 +155,11 @@
 /* clothes section */
 
 
+.clothes-section {
+    position: relative;
+}
 
-.main__clothes-section {}
-
-.clothes-section {}
-
-.clothes-section__title {
+.title--margin {
     margin-bottom: 70px;
 }
 
@@ -186,12 +182,13 @@
     top: 4px;
 }
 
+
 .clothes-section__items {
-    padding: 0 15px;
+    padding: 0 37px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
-    column-gap: 39px;
-    
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 39px;
+
 
 }
 
@@ -199,6 +196,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 33px;
+
 }
 
 .clothes-section__img img {
@@ -207,15 +205,21 @@
     object-fit: cover;
     aspect-ratio: 262 / 262;
     transition: transform .3s;
+}
 
+@media(any-hover: hover) {
+    .clothes-section__img img:hover {
+        transform: scale(1.04);
+    }
+}
 
-}.clothes-section__img img:hover{
-    transform: scale(1.04);
-
-
-}.clothes-section__img{
+.clothes-section__img {
     overflow: hidden;
     border-radius: 12px;
+}
+
+.clothes-section__img a {
+    display: block;
 }
 
 .clothes-section__name {
@@ -226,4 +230,269 @@
     font-weight: 700;
     letter-spacing: 0.2px;
     padding-bottom: 5px;
+}
+
+.clothes-section__array-button--one {
+    position: absolute;
+    right: 0;
+    bottom: 190px;
+    transition: transform .3s;
+}
+
+.clothes-section__array-button--two img {
+    transform: rotate(180deg);
+}
+
+.clothes-section__array-button--two {
+    position: absolute;
+    left: 0;
+    bottom: 190px;
+    transition: transform .3s;
+}
+
+@media(any-hover: hover) {
+
+    .clothes-section__array-button--one:hover,
+    .clothes-section__array-button--two:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+@media(max-width: 799px) {
+    .clothes-section__title {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    @media(max-width: 362px) {
+        .clothes-section__title {
+            font-size: 35px;
+        }
+    }
+
+    .clothes-section__title::before {
+        display: none;
+    }
+
+}
+
+@media(max-width: 1142px) {
+
+    .clothes-section__array-button--one,
+    .clothes-section__array-button--two {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+.big-saving__items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+}
+
+
+.big-saving__item {
+    display: grid;
+    grid-column: span 4;
+    align-items: center;
+
+}
+
+.big-saving__card {
+    position: absolute;
+
+
+}
+
+.big-saving__card img {
+   
+    
+}
+
+.big-saving__text {
+    position: relative;
+    z-index: 2;
+    padding: 0 26px 64px 20px;
+}
+
+.big-saving__text--left {
+    justify-self: start;
+
+
+
+
+}
+
+.big-saving__name {
+    color: #FFF;
+    font-family: Core Sans C;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38.431px;
+    letter-spacing: 0.56px;
+    max-width: 120px;
+}
+
+.big-saving__name--margin {
+    margin-bottom: 10px;
+}
+
+.big-saving__label {
+    color: #FFF;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.big-saving__label--margin {
+    margin-bottom: 10px;
+}
+
+.big-saving__sale {
+    color: #FFF;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.big-saving__sale--margin {
+    margin-bottom: 31px;
+}
+
+.big-saving__arrey {
+    padding: 0 45px;
+}
+
+.big-saving__arrey--margin {
+    margin-bottom: 40px;
+}
+
+.big-saving__button a {
+    padding: 10px 25px;
+    color: #FFF;
+    text-align: center;
+    font-family: Causten;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.big-saving__text--right {
+    justify-self: end;
+    text-align: right;
+    padding-top: 34px;
+}
+
+.big-saving__limited-stock {
+    padding: 10px 16px;
+    color: #FFF;
+    text-align: center;
+    font-family: Causten;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #3C4242;
+    display: inline-block;
+    
+}.big-saving__limited-stock--margin{
+    margin-bottom: 29px;
+}.big-saving__text--black > div{
+    color: #3C4242;
+    text-align: left;
+}.big-saving__button--black a{
+    border: 1px solid #3C4242;
+    color: #3C4242;
+}
+
+.big-saving__item--column{
+    display: grid;
+    grid-column: span 6;
+    padding-right: 100px;
+}.big-saving__name--fz{
+    font-size: 32px;
+}.big-saving__label--fz{
+    font-size: 16px;
+}.big-saving__sale--fz{
+    font-size: 20px;
+}.big-saving__button--fz a{
+    font-size: 12px;
+    font-weight: 600;
+    border: 2px solid #3C4242;
+}.big-saving__item--padding{
+    padding-right: 70px;
+}
+
+
+
+.big-saving__item:hover .big-saving__card img{
+transform: scale(1.1);
+}.big-saving__card{
+    overflow: hidden;
+    border-radius: 12px;
+    
+}.big-saving__card img{
+  transition: transform .3s;  
+}
+
+
+.big-saving__button a::before{
+    content: "";
+    width: 100%;
+    background-color: #3C4242;
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    transition: all .5s;
+    opacity: 0.2;
+    overflow: hidden;
+    
+}.big-saving__button a{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+
+}.big-saving__button a:hover::before{
+    transform: translate(0);
+    overflow: hidden;
+
+    
+}.big-saving__name a:hover{
+text-decoration: underline;
+}
+
+.big-saving__item:hover .big-saving__arrey{
+    animation: arrey__anime 2s ease-in-out infinite;
+}
+
+@keyframes arrey__anime{
+
+    0%{
+        transform: translateY(0); 
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0); 
+    }
+}
+
+
+.big-saving__card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
