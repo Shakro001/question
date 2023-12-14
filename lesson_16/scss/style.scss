@@ -1,0 +1,135 @@
+@import "_reset.scss";
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    // .main__container
+
+    &__container {
+        max-width: 930px;
+        padding: 0 15px;
+        margin: 0 auto;
+        border: 1px solid black;
+    }
+
+    // .main__title
+
+    &__title {
+        color: #3c4242;
+        font-family: Core Sans C;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 33.5px; /* 119.643% */
+        letter-spacing: 0.56px;
+        margin-bottom: 20px;
+    }
+
+    // .main__adress
+
+    &__adress {
+        color: #3c4242;
+        font-family: Core Sans C;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 33.5px; /* 152.273% */
+        letter-spacing: 0.44px;
+        margin-bottom: 50px;
+    }
+
+    // .main__form
+
+    &__form {
+    }
+}
+.form {
+    // .form__input-box
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 426px));
+        column-gap: 15px;
+        justify-content: space-between;
+        row-gap: 31px;
+        @media(max-width: 480px){
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    &__input-box {
+        display: flex;
+        row-gap: 19px;
+        flex-direction: column;
+        
+        & label {
+            color: #3c4242;
+            font-family: Causten;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.36px;
+        }
+        & input {
+            padding: 17px 22px;
+            height: 100%;
+            border: 1px solid black;
+            &::placeholder {
+                color: #807d7e;
+                font-family: Causten;
+            }
+        }
+        & select {
+            color: #807d7e;
+            font-family: Causten;
+            padding: 17px 22px;
+            height: 100%;
+            font-size: 17px;
+        }
+        &.text-area-width {
+            grid-column: 1 / 3;
+            & textarea {
+                padding: 17px 22px;
+            }
+        }
+    }
+    & .form__check-boxes {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        grid-column: span 2;
+        &--margin {
+            margin-bottom: 30px;
+        }
+        & .check-box {
+            display: flex;
+            column-gap: 11px;
+            & label {
+                color: #3c4242;
+                font-family: Causten;
+                font-size: 20.087px;
+            }
+        }
+    }
+    & .form__buttons {
+        display: flex;
+        column-gap: 30px;
+
+        & .form__button{
+            
+            text-align: center;
+            font-family: Causten;
+            font-size: 20.087px;
+            font-weight: 600;
+            padding: 12px 40px;
+            color: #807D7E;
+            &--bg{
+                border-radius: 8px;
+                background: #8a33fd; 
+                color: #fff;
+            }
+        }
+    }
+}
